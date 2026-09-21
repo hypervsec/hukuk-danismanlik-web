@@ -131,33 +131,61 @@
 }
 
 @media (max-width: 1100px) {
+  .expertise-section {
+    padding: 45px 40px 80px;
+  }
+
   .expertise-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .expertise-card {
+    height: 360px;
   }
 }
 
 @media (max-width: 700px) {
   .expertise-section {
-    padding: 50px 25px 80px;
+    padding: 45px 15px 60px;
+  }
+
+  .expertise-title {
+    margin-bottom: 25px;
   }
 
   .expertise-title h2 {
-    font-size: 42px;
+    font-size: 36px;
+    line-height: 1.1;
   }
 
+  /* Mobilde 6 kart: 3 sıra x 2 kolon */
   .expertise-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
   }
 
   .expertise-card {
-    height: 420px;
+    height: 230px;
+    border-radius: 10px;
   }
 
   .overlay {
-    padding: 25px;
+    padding: 14px;
+  }
+
+  .overlay span {
+    font-size: 28px;
   }
 
   .overlay h3 {
-    font-size: 30px;
+    font-size: 19px;
+    line-height: 1.1;
+    margin: 8px 0;
+  }
+
+  .overlay p {
+    font-size: 11px;
+    line-height: 1.35;
   }
 }

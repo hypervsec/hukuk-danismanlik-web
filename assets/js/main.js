@@ -18,6 +18,7 @@ function loadComponent(id, file) {
 
       return response.text();
     })
+
     .then((data) => {
       element.innerHTML = data;
 
@@ -25,6 +26,7 @@ function loadComponent(id, file) {
         initHeader();
       }
     })
+
     .catch((error) => {
       console.error("Component hatası:", error);
     });
@@ -32,15 +34,22 @@ function loadComponent(id, file) {
 
 function initHeader() {
   const header = document.querySelector(".header");
+
   const menuButton = document.querySelector(".menu-toggle");
+
   const menu = document.querySelector(".nav-menu");
+
+  // Menü aç kapa
 
   if (menuButton && menu) {
     menuButton.addEventListener("click", function () {
       menu.classList.toggle("active");
+
       menuButton.classList.toggle("open");
     });
   }
+
+  // Menü linkine basınca kapat
 
   const links = document.querySelectorAll(".nav-menu a");
 
@@ -56,15 +65,7 @@ function initHeader() {
     });
   });
 
-  const currentPage = window.location.pathname.split("/").pop();
-
-  links.forEach((link) => {
-    const href = link.getAttribute("href");
-
-    if (href === currentPage || (currentPage === "" && href === "index.html")) {
-      link.classList.add("active");
-    }
-  });
+  // HEADER SCROLL
 
   if (header) {
     window.addEventListener("scroll", function () {
@@ -97,6 +98,8 @@ function initHeroSlider() {
   }, 5000);
 }
 
+// FORM
+
 document.addEventListener("submit", function (event) {
   const form = event.target;
 
@@ -126,6 +129,8 @@ document.addEventListener("submit", function (event) {
     }, 2000);
   }, 1200);
 });
+
+// HOVER EFFECT
 
 document.addEventListener("mouseover", function (event) {
   const card = event.target.closest(".service-card");
