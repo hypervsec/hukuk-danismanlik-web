@@ -1,5 +1,5 @@
 /* ============================
-   MAKALELER SAYFASI
+   MAKALELER PREMIUM
 ============================ */
 
 /* ============================
@@ -11,11 +11,43 @@
 
   margin: auto;
 
-  padding: 100px 40px;
+  padding: 60px 70px 120px;
 }
 
 /* ============================
-   ARTICLE GRID
+   TITLE
+============================ */
+
+.article-title {
+  text-align: center;
+
+  max-width: 750px;
+
+  margin: 0 auto 65px;
+}
+
+.article-title h2 {
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 62px;
+
+  font-weight: 600;
+
+  color: var(--dark);
+
+  margin-bottom: 20px;
+}
+
+.article-title p {
+  font-size: 17px;
+
+  color: #2b2b2b;
+
+  line-height: 1.8;
+}
+
+/* ============================
+   GRID
 ============================ */
 
 .article-grid {
@@ -23,75 +55,119 @@
 
   grid-template-columns: repeat(3, 1fr);
 
-  gap: 30px;
+  gap: 35px;
 }
 
 /* ============================
-   ARTICLE CARD
+   CARD
 ============================ */
 
 .article-card {
-  background: #fff;
+  position: relative;
 
-  border: 1px solid var(--border);
+  background: #faf7f1;
+
+  border-radius: 12px;
 
   overflow: hidden;
 
-  transition: 0.3s ease;
+  border: 1px solid rgba(176, 141, 87, 0.18);
+
+  transition: 0.4s ease;
 }
 
 .article-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-10px);
 
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.12);
 }
+
+/* ============================
+   IMAGE
+============================ */
 
 .article-card img {
   width: 100%;
 
-  height: 260px;
+  height: 280px;
 
   object-fit: cover;
+
+  transition: 0.6s ease;
 }
 
-.article-card div {
-  padding: 30px;
+.article-card:hover img {
+  transform: scale(1.06);
+}
+
+/* ============================
+   CONTENT
+============================ */
+
+.article-content {
+  padding: 35px;
+
+  position: relative;
+}
+
+.article-content::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+
+  left: 35px;
+
+  width: 50px;
+
+  height: 2px;
+
+  background: var(--gold);
 }
 
 .article-card span {
+  display: block;
+
   color: var(--gold);
 
   font-size: 12px;
 
-  letter-spacing: 2px;
+  letter-spacing: 3px;
+
+  margin-bottom: 18px;
 }
 
 .article-card h3 {
   font-family: "Cormorant Garamond", serif;
 
-  font-size: 32px;
+  font-size: 34px;
 
   line-height: 1.2;
 
+  font-weight: 600;
+
   color: var(--dark);
 
-  margin: 15px 0;
+  margin-bottom: 18px;
 }
 
 .article-card p {
-  color: #555;
+  color: #444;
+
+  font-size: 15px;
 
   line-height: 1.8;
+
+  margin-bottom: 25px;
 }
 
 /* ============================
-   READ BUTTON
+   READ LINK
 ============================ */
 
 .article-read {
-  display: inline-block;
-
-  margin-top: 20px;
+  display: inline-flex;
 
   color: var(--gold);
 
@@ -104,6 +180,8 @@
 
 .article-read:hover {
   color: var(--dark);
+
+  transform: translateX(6px);
 }
 
 /* ============================
@@ -115,17 +193,17 @@
 
   margin: auto;
 
-  padding: 90px 40px;
+  padding: 100px 40px;
 }
 
 .article-detail h1 {
   font-family: "Cormorant Garamond", serif;
 
-  font-size: 60px;
-
-  color: var(--dark);
+  font-size: 65px;
 
   line-height: 1.1;
+
+  color: var(--dark);
 
   margin-bottom: 30px;
 }
@@ -134,12 +212,18 @@
   width: 100%;
 
   margin: 40px 0;
+
+  border-radius: 10px;
+
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
 }
 
 .article-detail p {
-  line-height: 1.9;
+  color: #2b2b2b;
 
-  color: #444;
+  font-size: 17px;
+
+  line-height: 1.9;
 
   margin-bottom: 25px;
 }
@@ -147,30 +231,42 @@
 .article-detail h2 {
   font-family: "Cormorant Garamond", serif;
 
-  font-size: 40px;
+  font-size: 42px;
 
   color: var(--dark);
 
-  margin: 40px 0 20px;
+  margin: 45px 0 20px;
 }
 
 /* ============================
    RESPONSIVE
 ============================ */
 
-@media (max-width: 1000px) {
-  .article-grid {
-    grid-template-columns: repeat(2, 1fr);
+@media (max-width: 1100px) {
+  .article-section {
+    padding: 80px 40px;
   }
 
-  .article-section {
-    padding: 70px 25px;
+  .article-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 700px) {
+  .article-section {
+    padding: 60px 25px;
+  }
+
+  .article-title h2 {
+    font-size: 45px;
+  }
+
   .article-grid {
     grid-template-columns: 1fr;
+  }
+
+  .article-card h3 {
+    font-size: 30px;
   }
 
   .article-detail {
@@ -180,4 +276,61 @@
   .article-detail h1 {
     font-size: 42px;
   }
+}
+/* ============================
+   ARTICLE DETAIL EXTRA
+============================ */
+
+.article-category {
+  display: inline-block;
+
+  color: var(--gold);
+
+  font-size: 13px;
+
+  letter-spacing: 4px;
+
+  margin-bottom: 25px;
+}
+
+.article-cta {
+  margin-top: 70px;
+
+  padding: 50px;
+
+  background: #211812;
+
+  text-align: center;
+
+  border-radius: 10px;
+}
+
+.article-cta h2 {
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 40px;
+
+  color: #fff;
+
+  margin-bottom: 30px;
+}
+
+.article-cta .btn {
+  display: inline-flex;
+
+  padding: 16px 35px;
+
+  background: var(--gold);
+
+  color: #fff;
+
+  border: 1px solid var(--gold);
+
+  transition: 0.3s ease;
+}
+
+.article-cta .btn:hover {
+  background: transparent;
+
+  color: var(--gold);
 }

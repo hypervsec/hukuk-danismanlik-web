@@ -9,18 +9,27 @@
 
     <meta
       name="description"
-      content="Av. Şeyma Nida Menüş Hukuk & Danışmanlık iletişim bilgileri, randevu ve hukuki danışmanlık başvurusu."
+      content="Hukuki danışmanlık ve randevu talepleriniz için Av. Şeyma Nida Menüş ile iletişime geçebilirsiniz."
     />
 
     <link rel="stylesheet" href="assets/css/style.css" />
+
     <link rel="stylesheet" href="assets/css/header.css" />
+
     <link rel="stylesheet" href="assets/css/footer.css" />
+
     <link rel="stylesheet" href="assets/css/iletisim.css" />
+
     <link rel="stylesheet" href="assets/css/responsive.css" />
 
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
     />
   </head>
 
@@ -30,7 +39,10 @@
     <section class="page-hero">
       <h1>İletişim</h1>
 
-      <p>Hukuki destek ve danışmanlık için bizimle iletişime geçebilirsiniz.</p>
+      <p>
+        Hukuki danışmanlık ve randevu talepleriniz için bizimle iletişime
+        geçebilirsiniz.
+      </p>
     </section>
 
     <section class="contact-section">
@@ -41,7 +53,7 @@
 
         <p>
           Hukuki süreçleriniz hakkında bilgi almak, profesyonel destek talep
-          etmek veya randevu oluşturmak için bizimle iletişime geçebilirsiniz.
+          etmek veya görüşme oluşturmak için bizimle iletişime geçebilirsiniz.
         </p>
 
         <div class="contact-box">
@@ -66,17 +78,7 @@
           <div>
             <h4>Telefon</h4>
 
-            <p>+90 XXX XXX XX XX</p>
-          </div>
-        </div>
-
-        <div class="contact-box">
-          <i class="fa-solid fa-envelope"></i>
-
-          <div>
-            <h4>E-Posta</h4>
-
-            <p>info@seymanidamenus.com</p>
+            <p>+90 541 248 38 51</p>
           </div>
         </div>
 
@@ -96,7 +98,17 @@
       </div>
 
       <div class="contact-form-wrapper">
-        <form class="contact-form">
+        <div class="form-header">
+          <h3>Hukuki Destek Talebi</h3>
+
+          <p>Formu doldurarak görüşme talebinizi iletebilirsiniz.</p>
+        </div>
+
+        <form
+          class="contact-form"
+          action="https://formspree.io/f/FORM_ID"
+          method="POST"
+        >
           <div class="form-row">
             <div class="form-group">
               <label> Ad Soyad </label>
@@ -114,19 +126,14 @@
           <div class="form-group">
             <label> E-Posta </label>
 
-            <input
-              type="email"
-              name="email"
-              placeholder="E-posta adresiniz"
-              required
-            />
+            <input type="email" name="email" placeholder="E-posta adresiniz" />
           </div>
 
           <div class="form-group">
-            <label> Konu </label>
+            <label> Hukuki Alan </label>
 
-            <select name="subject" required>
-              <option value="">Konu Seçiniz</option>
+            <select name="subject">
+              <option>Konu Seçiniz</option>
 
               <option>Aile Hukuku</option>
 
@@ -145,19 +152,17 @@
 
             <textarea
               name="message"
-              placeholder="Mesajınızı yazınız..."
+              placeholder="Kısaca talebinizi açıklayınız..."
               required
             ></textarea>
           </div>
 
           <label class="kvkk-check">
-            <input type="checkbox" name="kvkk" required />
+            <input type="checkbox" required />
 
             <span>
-              <a href="kvkk.html"> KVKK Aydınlatma Metni </a>
-
-              'ni okudum ve kişisel verilerimin işlenmesine ilişkin
-              bilgilendirildim.
+              KVKK Aydınlatma Metni'ni okudum ve kişisel verilerimin işlenmesine
+              ilişkin bilgilendirildim.
             </span>
           </label>
 
@@ -167,22 +172,24 @@
     </section>
 
     <section class="map-area">
-      <div class="small-title">BULUNDUĞUMUZ KONUM</div>
+      <div class="small-title">KONUM</div>
 
       <h2>Bursa Hukuk Bürosu</h2>
 
       <iframe
-        src="https://www.google.com/maps?q=Tekel+Sk.+G.+Yazıcı+İş+Hanı+No:2+Demirtaşpaşa+16230+Osmangazi+Bursa&output=embed"
+        src="https://www.google.com/maps?q=Demirtaşpaşa+Bursa&output=embed"
         loading="lazy"
         allowfullscreen
-        referrerpolicy="no-referrer-when-downgrade"
-      >
-      </iframe>
+      ></iframe>
     </section>
 
     <div id="footer"></div>
 
-    <a href="https://wa.me/905000000000" class="whatsapp-btn">
+    <a
+      href="https://wa.me/905412483851"
+      class="whatsapp-btn"
+      aria-label="WhatsApp iletişim"
+    >
       <i class="fa-brands fa-whatsapp"></i>
     </a>
 

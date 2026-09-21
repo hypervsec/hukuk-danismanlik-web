@@ -1,104 +1,136 @@
 /* ============================
-   UZMANLIK SAYFASI
-============================ */
-
-/* ============================
-   EXPERTISE SECTION
+   UZMANLIK PREMIUM
 ============================ */
 
 .expertise-section {
   max-width: 1400px;
+
   margin: auto;
-  padding: 100px 40px;
+
+  padding: 45px 70px 100px;
+}
+
+.expertise-title {
+  text-align: center;
+
+  margin-bottom: 45px;
+}
+
+.expertise-title h2 {
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 60px;
+
+  font-weight: 600;
+
+  color: var(--dark);
 }
 
 .expertise-grid {
   display: grid;
+
   grid-template-columns: repeat(3, 1fr);
+
   gap: 30px;
 }
 
-/* ============================
-   EXPERTISE CARD
-============================ */
-
 .expertise-card {
-  background: #fff;
-  padding: 40px 30px;
-  border: 1px solid var(--border);
-  transition: 0.3s ease;
+  position: relative;
+
+  height: 450px;
+
+  overflow: hidden;
+
+  border-radius: 12px;
+
+  background: #211812;
+
+  transition: 0.4s ease;
+}
+
+.expertise-card img {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: 0.6s ease;
+}
+
+.expertise-card::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: linear-gradient(
+    transparent 20%,
+
+    rgba(33, 24, 18, 0.92)
+  );
 }
 
 .expertise-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  transform: translateY(-8px);
+
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.2);
 }
 
-.expertise-card span {
-  display: block;
+.expertise-card:hover img {
+  transform: scale(1.08);
+}
+
+.overlay {
+  position: absolute;
+
+  z-index: 2;
+
+  bottom: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  padding: 35px;
+
+  color: white;
+}
+
+.overlay span {
   font-family: "Cormorant Garamond", serif;
-  font-size: 55px;
+
+  font-size: 50px;
+
+  line-height: 1;
+
   color: var(--gold);
-  margin-bottom: 15px;
 }
 
-.expertise-card h3 {
+.overlay h3 {
   font-family: "Cormorant Garamond", serif;
-  font-size: 34px;
-  color: var(--dark);
-  margin-bottom: 20px;
+
+  font-size: 35px;
+
+  font-weight: 600;
+
+  color: #fff;
+
+  margin: 12px 0;
 }
 
-.expertise-card p {
-  color: #555;
-  line-height: 1.8;
+.overlay p {
+  font-size: 15px;
+
+  line-height: 1.75;
+
+  color: #eee;
+
+  margin-bottom: 0;
 }
 
-/* ============================
-   EXPERTISE DETAIL
-============================ */
-
-.expertise-detail {
-  max-width: 1000px;
-  margin: auto;
-  padding: 90px 40px;
-}
-
-.expertise-detail h2 {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 48px;
-  color: var(--dark);
-  margin-bottom: 25px;
-}
-
-.expertise-detail h3 {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 32px;
-  color: var(--dark);
-  margin: 40px 0 20px;
-}
-
-.expertise-detail p {
-  line-height: 1.9;
-  color: #444;
-  margin-bottom: 20px;
-}
-
-.expertise-detail ul {
-  padding-left: 25px;
-  margin: 20px 0;
-}
-
-.expertise-detail li {
-  line-height: 1.8;
-  margin-bottom: 10px;
-}
-
-/* ============================
-   RESPONSIVE
-============================ */
-
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
   .expertise-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -106,22 +138,26 @@
 
 @media (max-width: 700px) {
   .expertise-section {
-    padding: 70px 25px;
+    padding: 50px 25px 80px;
+  }
+
+  .expertise-title h2 {
+    font-size: 42px;
   }
 
   .expertise-grid {
     grid-template-columns: 1fr;
   }
 
-  .expertise-detail {
-    padding: 60px 25px;
+  .expertise-card {
+    height: 420px;
   }
 
-  .expertise-detail h2 {
-    font-size: 38px;
+  .overlay {
+    padding: 25px;
   }
 
-  .expertise-card h3 {
-    font-size: 28px;
+  .overlay h3 {
+    font-size: 30px;
   }
 }

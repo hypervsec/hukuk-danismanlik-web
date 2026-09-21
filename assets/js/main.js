@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
   loadComponent("header", "components/header.html");
   loadComponent("footer", "components/footer.html");
+
+  initHeroSlider();
 });
 
 function loadComponent(id, file) {
@@ -75,6 +77,26 @@ function initHeader() {
   }
 }
 
+function initHeroSlider() {
+  const slides = document.querySelectorAll(".hero-slide");
+
+  if (!slides.length) return;
+
+  let currentSlide = 0;
+
+  setInterval(function () {
+    slides[currentSlide].classList.remove("active");
+
+    currentSlide++;
+
+    if (currentSlide >= slides.length) {
+      currentSlide = 0;
+    }
+
+    slides[currentSlide].classList.add("active");
+  }, 5000);
+}
+
 document.addEventListener("submit", function (event) {
   const form = event.target;
 
@@ -89,6 +111,7 @@ document.addEventListener("submit", function (event) {
   const oldText = button.innerHTML;
 
   button.disabled = true;
+
   button.innerHTML = "GÖNDERİLİYOR...";
 
   setTimeout(function () {
@@ -98,6 +121,7 @@ document.addEventListener("submit", function (event) {
 
     setTimeout(function () {
       button.innerHTML = oldText;
+
       button.disabled = false;
     }, 2000);
   }, 1200);
