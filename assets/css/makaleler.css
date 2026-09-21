@@ -1,0 +1,183 @@
+/* ============================
+   MAKALELER SAYFASI
+============================ */
+
+/* ============================
+   ARTICLE SECTION
+============================ */
+
+.article-section {
+  max-width: 1400px;
+
+  margin: auto;
+
+  padding: 100px 40px;
+}
+
+/* ============================
+   ARTICLE GRID
+============================ */
+
+.article-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 30px;
+}
+
+/* ============================
+   ARTICLE CARD
+============================ */
+
+.article-card {
+  background: #fff;
+
+  border: 1px solid var(--border);
+
+  overflow: hidden;
+
+  transition: 0.3s ease;
+}
+
+.article-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.article-card img {
+  width: 100%;
+
+  height: 260px;
+
+  object-fit: cover;
+}
+
+.article-card div {
+  padding: 30px;
+}
+
+.article-card span {
+  color: var(--gold);
+
+  font-size: 12px;
+
+  letter-spacing: 2px;
+}
+
+.article-card h3 {
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 32px;
+
+  line-height: 1.2;
+
+  color: var(--dark);
+
+  margin: 15px 0;
+}
+
+.article-card p {
+  color: #555;
+
+  line-height: 1.8;
+}
+
+/* ============================
+   READ BUTTON
+============================ */
+
+.article-read {
+  display: inline-block;
+
+  margin-top: 20px;
+
+  color: var(--gold);
+
+  font-size: 13px;
+
+  letter-spacing: 1px;
+
+  transition: 0.3s ease;
+}
+
+.article-read:hover {
+  color: var(--dark);
+}
+
+/* ============================
+   ARTICLE DETAIL
+============================ */
+
+.article-detail {
+  max-width: 900px;
+
+  margin: auto;
+
+  padding: 90px 40px;
+}
+
+.article-detail h1 {
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 60px;
+
+  color: var(--dark);
+
+  line-height: 1.1;
+
+  margin-bottom: 30px;
+}
+
+.article-detail img {
+  width: 100%;
+
+  margin: 40px 0;
+}
+
+.article-detail p {
+  line-height: 1.9;
+
+  color: #444;
+
+  margin-bottom: 25px;
+}
+
+.article-detail h2 {
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 40px;
+
+  color: var(--dark);
+
+  margin: 40px 0 20px;
+}
+
+/* ============================
+   RESPONSIVE
+============================ */
+
+@media (max-width: 1000px) {
+  .article-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .article-section {
+    padding: 70px 25px;
+  }
+}
+
+@media (max-width: 700px) {
+  .article-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .article-detail {
+    padding: 60px 25px;
+  }
+
+  .article-detail h1 {
+    font-size: 42px;
+  }
+}

@@ -1,143 +1,94 @@
-/* ============================
-   FOOTER
-============================ */
-
 .footer {
   position: relative;
-
   padding: 70px 8% 25px;
-
   color: #fff;
-
   background:
     linear-gradient(rgba(20, 12, 8, 0.88), rgba(20, 12, 8, 0.88)),
     url("../images/footer-bg.jpg");
-
   background-size: cover;
-
   background-position: center;
-
   overflow: hidden;
 }
 
 .footer-container {
   max-width: 1450px;
-
   margin: auto;
-
   display: grid;
-
   grid-template-columns: 1.5fr 1fr 1fr 0.8fr;
-
   gap: 60px;
-
   padding-bottom: 50px;
-
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-/* ============================
-   FOOTER LOGO
-============================ */
+/* LOGO */
 
 .footer-logo-link {
   display: flex;
-
   align-items: center;
-
   gap: 22px;
 }
 
 .footer-logo-img {
   width: 110px;
-
   height: auto;
-
   object-fit: contain;
 }
 
 .footer-logo-info {
   display: flex;
-
   flex-direction: column;
 }
 
 .footer-logo-name {
   font-family: "Cormorant Garamond", serif;
-
   font-size: 26px;
-
   font-weight: 600;
-
   letter-spacing: 2px;
-
   color: #fff;
-
   white-space: nowrap;
 }
 
 .footer-logo-line {
   display: flex;
-
   align-items: center;
-
   gap: 10px;
-
   margin-top: 8px;
 }
 
 .footer-logo-line span {
   width: 38px;
-
   height: 1px;
-
   background: #a9875a;
 }
 
 .footer-logo-line p {
   margin: 0;
-
   color: #a9875a;
-
   font-size: 9px;
-
   letter-spacing: 4px;
-
   white-space: nowrap;
 }
 
 .footer-description {
   margin-top: 22px;
-
   max-width: 330px;
-
   font-size: 14px;
-
   line-height: 1.9;
-
   color: #ddd;
 }
 
-/* ============================
-   TITLES
-============================ */
+/* TITLES */
 
 .footer-col h3,
 .footer-useful h3 {
   font-family: "Cormorant Garamond", serif;
-
   font-size: 27px;
-
   font-weight: 600;
-
   color: #a9875a;
-
   margin-bottom: 25px;
 }
 
-/* ============================
-   CONTACT
-============================ */
+/* CONTACT */
 
 .footer-contact {
   list-style: none;
@@ -145,27 +96,19 @@
 
 .footer-contact li {
   display: flex;
-
   align-items: center;
-
   gap: 12px;
-
   margin-bottom: 18px;
-
   font-size: 15px;
-
   color: #ddd;
 }
 
 .footer-contact i {
   color: #a9875a;
-
   width: 18px;
 }
 
-/* ============================
-   MENU LINKS
-============================ */
+/* LINKS */
 
 .footer-links {
   list-style: none;
@@ -177,7 +120,6 @@
 
 .footer-links a {
   color: #ddd;
-
   transition: 0.3s;
 }
 
@@ -185,49 +127,32 @@
   color: #a9875a;
 }
 
-/* ============================
-   SOCIAL MEDIA
-============================ */
+/* SOCIAL */
 
 .footer-social {
   display: flex;
-
   gap: 12px;
 }
 
 .footer-social a {
   width: 45px;
-
   height: 45px;
-
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
   color: #fff;
-
   border-radius: 4px;
-
   font-size: 18px;
-
   transition: 0.3s;
 }
-
-/* Instagram */
 
 .footer-social a:nth-child(1) {
   background: #e1306c;
 }
 
-/* LinkedIn */
-
 .footer-social a:nth-child(2) {
   background: #0a66c2;
 }
-
-/* Facebook */
 
 .footer-social a:nth-child(3) {
   background: #1877f2;
@@ -235,41 +160,29 @@
 
 .footer-social a:hover {
   transform: translateY(-4px);
-
   filter: brightness(1.1);
 }
 
-/* ============================
-   USEFUL LINKS
-============================ */
+/* USEFUL */
 
 .footer-useful {
   max-width: 1450px;
-
   margin: 35px auto 0;
-
   padding-bottom: 35px;
-
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .useful-links {
   display: flex;
-
   flex-wrap: wrap;
-
   gap: 30px;
 }
 
 .useful-links a {
   color: #ddd;
-
   font-size: 14px;
-
   display: flex;
-
   align-items: center;
-
   gap: 8px;
 }
 
@@ -277,47 +190,31 @@
   color: #a9875a;
 }
 
-/* ============================
-   LEGAL TEXT
-============================ */
+/* LEGAL */
 
 .footer-legal {
   max-width: 1200px;
-
   margin: 25px auto;
-
   text-align: center;
-
   color: #aaa;
-
   font-size: 11px;
-
   line-height: 1.8;
 }
 
-/* ============================
-   BOTTOM
-============================ */
+/* BOTTOM */
 
 .footer-bottom {
   max-width: 1450px;
-
   margin: auto;
-
   display: flex;
-
   justify-content: space-between;
-
   align-items: center;
-
   padding-top: 25px;
-
   font-size: 14px;
 }
 
 .footer-bottom div {
   display: flex;
-
   gap: 25px;
 }
 
@@ -329,9 +226,7 @@
   color: #a9875a;
 }
 
-/* ============================
-   RESPONSIVE
-============================ */
+/* RESPONSIVE */
 
 @media (max-width: 1000px) {
   .footer-container {
@@ -354,9 +249,7 @@
 
   .footer-bottom {
     flex-direction: column;
-
     gap: 20px;
-
     text-align: center;
   }
 

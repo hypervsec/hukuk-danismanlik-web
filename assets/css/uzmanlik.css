@@ -1,0 +1,127 @@
+/* ============================
+   UZMANLIK SAYFASI
+============================ */
+
+/* ============================
+   EXPERTISE SECTION
+============================ */
+
+.expertise-section {
+  max-width: 1400px;
+  margin: auto;
+  padding: 100px 40px;
+}
+
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* ============================
+   EXPERTISE CARD
+============================ */
+
+.expertise-card {
+  background: #fff;
+  padding: 40px 30px;
+  border: 1px solid var(--border);
+  transition: 0.3s ease;
+}
+
+.expertise-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.expertise-card span {
+  display: block;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 55px;
+  color: var(--gold);
+  margin-bottom: 15px;
+}
+
+.expertise-card h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 34px;
+  color: var(--dark);
+  margin-bottom: 20px;
+}
+
+.expertise-card p {
+  color: #555;
+  line-height: 1.8;
+}
+
+/* ============================
+   EXPERTISE DETAIL
+============================ */
+
+.expertise-detail {
+  max-width: 1000px;
+  margin: auto;
+  padding: 90px 40px;
+}
+
+.expertise-detail h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 48px;
+  color: var(--dark);
+  margin-bottom: 25px;
+}
+
+.expertise-detail h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 32px;
+  color: var(--dark);
+  margin: 40px 0 20px;
+}
+
+.expertise-detail p {
+  line-height: 1.9;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.expertise-detail ul {
+  padding-left: 25px;
+  margin: 20px 0;
+}
+
+.expertise-detail li {
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+
+/* ============================
+   RESPONSIVE
+============================ */
+
+@media (max-width: 1000px) {
+  .expertise-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .expertise-section {
+    padding: 70px 25px;
+  }
+
+  .expertise-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .expertise-detail {
+    padding: 60px 25px;
+  }
+
+  .expertise-detail h2 {
+    font-size: 38px;
+  }
+
+  .expertise-card h3 {
+    font-size: 28px;
+  }
+}

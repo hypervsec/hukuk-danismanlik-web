@@ -5,146 +5,179 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>İletişim | Av. Şeyma Nida Menüş</title>
+    <title>İletişim | Av. Şeyma Nida Menüş Hukuk & Danışmanlık</title>
 
     <meta
       name="description"
-      content="Av. Şeyma Nida Menüş ile iletişime geçin. Hukuki danışmanlık ve randevu talepleriniz için bize ulaşın."
+      content="Av. Şeyma Nida Menüş Hukuk & Danışmanlık iletişim bilgileri, randevu ve hukuki danışmanlık başvurusu."
     />
-
-    <link rel="icon" href="assets/icons/favicon.svg" />
 
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/header.css" />
     <link rel="stylesheet" href="assets/css/footer.css" />
+    <link rel="stylesheet" href="assets/css/iletisim.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
 
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
-    />
   </head>
 
   <body>
-    <!-- ============================
-     HEADER
-============================ -->
-
-    <header class="header">
-      <div class="header-container">
-        <!-- LOGO -->
-
-        <a href="index.html" class="logo">
-          <img src="assets/images/logo.png" alt="ŞNM Hukuk Logo" />
-
-          <div class="logo-info">
-            <div class="logo-name">AV. ŞEYMA NİDA MENÜŞ</div>
-
-            <div class="logo-line">
-              <span></span>
-
-              <p>HUKUK &amp; DANIŞMANLIK</p>
-
-              <span></span>
-            </div>
-          </div>
-        </a>
-
-        <!-- MENU -->
-
-        <nav class="nav-menu">
-          <a href="index.html"> Ana Sayfa </a>
-
-          <a href="hakkimda.html"> Hakkımızda </a>
-
-          <a href="uzmanlik.html"> Uzmanlık Alanları </a>
-
-          <a href="makaleler.html"> Makaleler </a>
-
-          <a href="iletisim.html"> İletişim </a>
-        </nav>
-
-        <!-- MOBILE MENU BUTTON -->
-
-        <button class="menu-toggle" aria-label="Menü">
-          <i class="fa-solid fa-bars"></i>
-        </button>
-      </div>
-    </header>
+    <div id="header"></div>
 
     <section class="page-hero">
       <h1>İletişim</h1>
 
-      <p>Hukuki danışmanlık için bizimle iletişime geçebilirsiniz.</p>
+      <p>Hukuki destek ve danışmanlık için bizimle iletişime geçebilirsiniz.</p>
     </section>
 
     <section class="contact-section">
       <div class="contact-info">
         <div class="small-title">BİZE ULAŞIN</div>
 
-        <h2>İletişim Bilgileri</h2>
+        <h2>Randevu ve Hukuki Danışmanlık</h2>
 
         <p>
-          Hukuki süreçleriniz hakkında bilgi almak ve randevu oluşturmak için
-          bize ulaşabilirsiniz.
+          Hukuki süreçleriniz hakkında bilgi almak, profesyonel destek talep
+          etmek veya randevu oluşturmak için bizimle iletişime geçebilirsiniz.
         </p>
 
-        <div class="contact-item">
+        <div class="contact-box">
           <i class="fa-solid fa-location-dot"></i>
 
-          <span> Bursa / Türkiye </span>
+          <div>
+            <h4>Adres</h4>
+
+            <p>
+              Tekel Sk. G. Yazıcı İş Hanı No:2
+              <br />
+              Demirtaşpaşa
+              <br />
+              16230 Osmangazi / Bursa
+            </p>
+          </div>
         </div>
 
-        <div class="contact-item">
+        <div class="contact-box">
           <i class="fa-solid fa-phone"></i>
 
-          <span> +90 5XX XXX XX XX </span>
+          <div>
+            <h4>Telefon</h4>
+
+            <p>+90 XXX XXX XX XX</p>
+          </div>
         </div>
 
-        <div class="contact-item">
+        <div class="contact-box">
           <i class="fa-solid fa-envelope"></i>
 
-          <span> info@seymanidamenus.com </span>
+          <div>
+            <h4>E-Posta</h4>
+
+            <p>info@seymanidamenus.com</p>
+          </div>
+        </div>
+
+        <div class="contact-box">
+          <i class="fa-solid fa-clock"></i>
+
+          <div>
+            <h4>Çalışma Saatleri</h4>
+
+            <p>
+              Hafta içi
+              <br />
+              09:00 - 18:00
+            </p>
+          </div>
         </div>
       </div>
 
-      <div class="contact-form">
-        <form>
-          <input type="text" placeholder="Ad Soyad" />
+      <div class="contact-form-wrapper">
+        <form class="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label> Ad Soyad </label>
 
-          <input type="email" placeholder="E-posta" />
+              <input type="text" name="name" placeholder="Ad Soyad" required />
+            </div>
 
-          <input type="tel" placeholder="Telefon" />
+            <div class="form-group">
+              <label> Telefon </label>
 
-          <textarea placeholder="Mesajınız"></textarea>
+              <input type="tel" name="phone" placeholder="Telefon" required />
+            </div>
+          </div>
 
-          <button class="btn">MESAJ GÖNDER →</button>
+          <div class="form-group">
+            <label> E-Posta </label>
+
+            <input
+              type="email"
+              name="email"
+              placeholder="E-posta adresiniz"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label> Konu </label>
+
+            <select name="subject" required>
+              <option value="">Konu Seçiniz</option>
+
+              <option>Aile Hukuku</option>
+
+              <option>Ceza Hukuku</option>
+
+              <option>İş Hukuku</option>
+
+              <option>Gayrimenkul Hukuku</option>
+
+              <option>Diğer</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label> Mesajınız </label>
+
+            <textarea
+              name="message"
+              placeholder="Mesajınızı yazınız..."
+              required
+            ></textarea>
+          </div>
+
+          <label class="kvkk-check">
+            <input type="checkbox" name="kvkk" required />
+
+            <span>
+              <a href="kvkk.html"> KVKK Aydınlatma Metni </a>
+
+              'ni okudum ve kişisel verilerimin işlenmesine ilişkin
+              bilgilendirildim.
+            </span>
+          </label>
+
+          <button type="submit" class="btn">GÖNDER</button>
         </form>
       </div>
     </section>
 
-    <section class="quote">
-      <div>
-        <h2>Hukuki desteğe ihtiyacınız olduğunda yanınızdayız.</h2>
-      </div>
+    <section class="map-area">
+      <div class="small-title">BULUNDUĞUMUZ KONUM</div>
 
-      <div>
-        <p>
-          Sorularınız ve danışmanlık talepleriniz için bizimle iletişime
-          geçebilirsiniz.
-        </p>
+      <h2>Bursa Hukuk Bürosu</h2>
 
-        <a href="tel:+905000000000" class="btn"> HEMEN ARA </a>
-      </div>
+      <iframe
+        src="https://www.google.com/maps?q=Tekel+Sk.+G.+Yazıcı+İş+Hanı+No:2+Demirtaşpaşa+16230+Osmangazi+Bursa&output=embed"
+        loading="lazy"
+        allowfullscreen
+        referrerpolicy="no-referrer-when-downgrade"
+      >
+      </iframe>
     </section>
 
     <div id="footer"></div>

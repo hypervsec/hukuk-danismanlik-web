@@ -9,20 +9,19 @@
 
     <meta
       name="description"
-      content="Av. Şeyma Nida Menüş Hukuk ve Danışmanlık. Profesyonel hukuki danışmanlık ve güvenilir temsil."
+      content="Av. Şeyma Nida Menüş Hukuk & Danışmanlık. Aile hukuku, ceza hukuku, iş hukuku ve hukuki danışmanlık hizmetleri."
     />
 
-    <link rel="icon" href="assets/icons/favicon.svg" />
-
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/header.css" />
-    <link rel="stylesheet" href="assets/css/footer.css" />
-    <link rel="stylesheet" href="assets/css/responsive.css" />
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    <meta
+      name="keywords"
+      content="avukat, hukuk bürosu, aile hukuku, ceza hukuku, iş hukuku, hukuki danışmanlık"
     />
+
+    <meta name="author" content="Av. Şeyma Nida Menüş" />
+
+    <link rel="canonical" href="/" />
+
+    <meta property="og:type" content="website" />
 
     <meta
       property="og:title"
@@ -31,12 +30,27 @@
 
     <meta
       property="og:description"
-      content="Profesyonel hukuki danışmanlık ve güvenilir temsil."
+      content="Güvenilir hukuki temsil ve profesyonel danışmanlık."
     />
 
-    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/images/hero-lawyer.jpg" />
 
-    <meta property="og:image" content="assets/images/hero.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" href="assets/icons/favicon.svg" />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <link rel="stylesheet" href="assets/css/header.css" />
+
+    <link rel="stylesheet" href="assets/css/footer.css" />
+
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
 
@@ -46,64 +60,34 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Attorney",
+        "name": "Av. Şeyma Nida Menüş",
+        "areaServed": "Türkiye",
+        "serviceType": [
+          "Aile Hukuku",
+          "Ceza Hukuku",
+          "İş Hukuku",
+          "Gayrimenkul Hukuku",
+          "Sözleşme Hukuku"
+        ]
+      }
+    </script>
   </head>
 
   <body>
-    <!-- ============================
-     HEADER
-============================ -->
-
-    <header class="header">
-      <div class="header-container">
-        <!-- LOGO -->
-
-        <a href="index.html" class="logo">
-          <img src="assets/images/logo.png" alt="ŞNM Hukuk Logo" />
-
-          <div class="logo-info">
-            <div class="logo-name">AV. ŞEYMA NİDA MENÜŞ</div>
-
-            <div class="logo-line">
-              <span></span>
-
-              <p>HUKUK &amp; DANIŞMANLIK</p>
-
-              <span></span>
-            </div>
-          </div>
-        </a>
-
-        <!-- MENU -->
-
-        <nav class="nav-menu">
-          <a href="index.html"> Ana Sayfa </a>
-
-          <a href="hakkimda.html"> Hakkımızda </a>
-
-          <a href="uzmanlik.html"> Uzmanlık Alanları </a>
-
-          <a href="makaleler.html"> Makaleler </a>
-
-          <a href="iletisim.html"> İletişim </a>
-        </nav>
-
-        <!-- MOBILE MENU BUTTON -->
-
-        <button class="menu-toggle" aria-label="Menü">
-          <i class="fa-solid fa-bars"></i>
-        </button>
-      </div>
-    </header>
-
-    <!-- ============================
-     HERO SECTION
-============================ -->
+    <div id="header"></div>
 
     <section class="hero-split">
       <div class="hero-image">
         <img
           src="assets/images/hero-lawyer.jpg"
-          alt="Av. Şeyma Nida Menüș Hukuk"
+          alt="Av. Şeyma Nida Menüş Hukuk"
+          loading="eager"
+          decoding="async"
         />
       </div>
 
@@ -111,10 +95,13 @@
 
       <div class="hero-container">
         <div class="hero-content">
-          <!-- BRAND -->
-
           <div class="hero-brand">
-            <img src="assets/images/logo.png" alt="ŞNM Hukuk Logo" />
+            <img
+              src="assets/images/logo.png"
+              alt="ŞNM Hukuk Logo"
+              loading="lazy"
+              decoding="async"
+            />
 
             <div class="hero-brand-info">
               <div class="hero-brand-name">AV. ŞEYMA NİDA MENÜŞ</div>
@@ -129,12 +116,10 @@
             </div>
           </div>
 
-          <!-- TITLE -->
-
           <h1>
             Haklarınızı koruyan,<br />
 
-            <i> güvenilir </i>
+            <i>güvenilir</i>
 
             hukuki temsil.
           </h1>
@@ -143,8 +128,6 @@
             Haklarınızı korumak, yalnızca dava açmak değil; süreci doğru
             stratejiyle yönetmektir.
           </p>
-
-          <!-- BUTTONS -->
 
           <div class="hero-buttons">
             <a href="iletisim.html" class="hero-btn primary"> RANDEVU AL </a>
@@ -210,7 +193,12 @@
 
       <div class="service-images">
         <div class="service-card">
-          <img src="assets/images/aile.jpg" alt="Aile Hukuku" />
+          <img
+            src="assets/images/aile.jpg"
+            alt="Aile Hukuku"
+            loading="lazy"
+            decoding="async"
+          />
 
           <div class="overlay">
             <span> 01 </span>
@@ -222,8 +210,14 @@
             <a href="uzmanlik.html"> DETAYLI BİLGİ → </a>
           </div>
         </div>
+
         <div class="service-card">
-          <img src="assets/images/ceza.jpg" alt="Ceza Hukuku" />
+          <img
+            src="assets/images/ceza.jpg"
+            alt="Ceza Hukuku"
+            loading="lazy"
+            decoding="async"
+          />
 
           <div class="overlay">
             <span> 02 </span>
@@ -237,7 +231,12 @@
         </div>
 
         <div class="service-card">
-          <img src="assets/images/is.jpg" alt="İş Hukuku" />
+          <img
+            src="assets/images/is.jpg"
+            alt="İş Hukuku"
+            loading="lazy"
+            decoding="async"
+          />
 
           <div class="overlay">
             <span> 03 </span>
@@ -251,7 +250,12 @@
         </div>
 
         <div class="service-card">
-          <img src="assets/images/gayrimenkul.jpg" alt="Gayrimenkul Hukuku" />
+          <img
+            src="assets/images/gayrimenkul.jpg"
+            alt="Gayrimenkul Hukuku"
+            loading="lazy"
+            decoding="async"
+          />
 
           <div class="overlay">
             <span> 04 </span>
@@ -265,7 +269,12 @@
         </div>
 
         <div class="service-card">
-          <img src="assets/images/icra.jpg" alt="İcra ve İflas Hukuku" />
+          <img
+            src="assets/images/icra.jpg"
+            alt="İcra ve İflas Hukuku"
+            loading="lazy"
+            decoding="async"
+          />
 
           <div class="overlay">
             <span> 05 </span>
@@ -279,7 +288,12 @@
         </div>
 
         <div class="service-card">
-          <img src="assets/images/sozlesme.jpg" alt="Sözleşme Hukuku" />
+          <img
+            src="assets/images/sozlesme.jpg"
+            alt="Sözleşme Hukuku"
+            loading="lazy"
+            decoding="async"
+          />
 
           <div class="overlay">
             <span> 06 </span>
@@ -325,11 +339,14 @@
       </div>
 
       <div>
-        <img src="assets/images/office.jpg" alt="Hukuk ofisi" />
+        <img
+          src="assets/images/office.jpg"
+          alt="Hukuk ofisi"
+          loading="lazy"
+          decoding="async"
+        />
       </div>
     </section>
-
-    <!-- GLOBAL FOOTER -->
 
     <div id="footer"></div>
 

@@ -1,122 +1,120 @@
 document.addEventListener("DOMContentLoaded", function () {
-  /* =========================
-       GLOBAL FOOTER
-    ========================= */
+  loadComponent("header", "components/header.html");
+  loadComponent("footer", "components/footer.html");
+});
 
-  const footer = document.getElementById("footer");
+function loadComponent(id, file) {
+  const element = document.getElementById(id);
 
-  if (footer) {
-    fetch("components/footer.html")
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Footer bulunamadı");
-        }
+  if (!element) return;
 
-        return response.text();
-      })
-
-      .then((data) => {
-        footer.innerHTML = data;
-      })
-
-      .catch((error) => {
-        console.error("Footer yükleme hatası:", error);
-      });
-  }
-
-  /* =========================
-       MOBILE MENU
-    ========================= */
-
-  const menuToggle = document.querySelector(".menu-toggle");
-
-  const navMenu = document.querySelector(".nav-menu");
-
-  if (menuToggle && navMenu) {
-    menuToggle.addEventListener("click", function () {
-      navMenu.classList.toggle("active");
-
-      menuToggle.classList.toggle("open");
-    });
-  }
-
-  /* =========================
-       CLOSE MOBILE MENU
-    ========================= */
-
-  const menuLinks = document.querySelectorAll(".nav-menu a");
-
-  menuLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      if (navMenu) {
-        navMenu.classList.remove("active");
+  fetch(file)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(file + " yüklenemedi");
       }
-    });
-  });
 
-  /* =========================
-       CONTACT FORM
-    ========================= */
+      return response.text();
+    })
+    .then((data) => {
+      element.innerHTML = data;
 
-  const contactForm = document.querySelector(".contact-form");
-
-  if (contactForm) {
-    contactForm.addEventListener("submit", function (e) {
-      e.preventDefault();
-
-      const button = this.querySelector("button");
-
-      if (button) {
-        const oldText = button.innerHTML;
-
-        button.innerHTML = "GÖNDERİLİYOR...";
-
-        button.disabled = true;
-
-        setTimeout(() => {
-          button.innerHTML = "MESAJ GÖNDERİLDİ ✓";
-
-          this.reset();
-
-          setTimeout(() => {
-            button.innerHTML = oldText;
-
-            button.disabled = false;
-          }, 2000);
-        }, 1500);
+      if (id === "header") {
+        initHeader();
       }
+    })
+    .catch((error) => {
+      console.error("Component hatası:", error);
     });
-  }
+}
 
-  /* =========================
-       SERVICE CARDS
-    ========================= */
-
-  const cards = document.querySelectorAll(".service-card");
-
-  cards.forEach((card) => {
-    card.addEventListener("mouseenter", () => {
-      card.classList.add("active");
-    });
-
-    card.addEventListener("mouseleave", () => {
-      card.classList.remove("active");
-    });
-  });
-
-  /* =========================
-       HEADER SCROLL EFFECT
-    ========================= */
-
+function initHeader() {
   const header = document.querySelector(".header");
+  const menuButton = document.querySelector(".menu-toggle");
+  const menu = document.querySelector(".nav-menu");
+
+  if (menuButton && menu) {
+    menuButton.addEventListener("click", function () {
+      menu.classList.toggle("active");
+      menuButton.classList.toggle("open");
+    });
+  }
+
+  const links = document.querySelectorAll(".nav-menu a");
+
+  links.forEach((link) => {
+    link.addEventListener("click", function () {
+      if (menu) {
+        menu.classList.remove("active");
+      }
+
+      if (menuButton) {
+        menuButton.classList.remove("open");
+      }
+    });
+  });
+
+  const currentPage = window.location.pathname.split("/").pop();
+
+  links.forEach((link) => {
+    const href = link.getAttribute("href");
+
+    if (href === currentPage || (currentPage === "" && href === "index.html")) {
+      link.classList.add("active");
+    }
+  });
 
   if (header) {
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 50) {
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 60) {
         header.classList.add("scrolled");
       } else {
         header.classList.remove("scrolled");
       }
     });
+  }
+}
+
+document.addEventListener("submit", function (event) {
+  const form = event.target;
+
+  if (!form.classList.contains("contact-form")) return;
+
+  event.preventDefault();
+
+  const button = form.querySelector("button");
+
+  if (!button) return;
+
+  const oldText = button.innerHTML;
+
+  button.disabled = true;
+  button.innerHTML = "GÖNDERİLİYOR...";
+
+  setTimeout(function () {
+    button.innerHTML = "MESAJ GÖNDERİLDİ ✓";
+
+    form.reset();
+
+    setTimeout(function () {
+      button.innerHTML = oldText;
+      button.disabled = false;
+    }, 2000);
+  }, 1200);
+});
+
+document.addEventListener("mouseover", function (event) {
+  const card = event.target.closest(".service-card");
+
+  if (card) {
+    card.classList.add("active");
+  }
+});
+
+document.addEventListener("mouseout", function (event) {
+  const card = event.target.closest(".service-card");
+
+  if (card) {
+    card.classList.remove("active");
   }
 });
