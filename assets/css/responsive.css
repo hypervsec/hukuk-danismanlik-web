@@ -132,3 +132,34 @@
 body.menu-open {
   overflow: hidden;
 }
+/* ============================
+   MOBILE HERO FULL SCREEN FIX
+============================ */
+
+@media (max-width: 600px) {
+  .hero-split {
+    min-height: 100svh;
+
+    height: 100svh;
+
+    overflow: hidden;
+  }
+
+  .hero-container {
+    min-height: 100svh;
+
+    display: flex;
+
+    align-items: center;
+
+    padding-top: 120px;
+
+    padding-bottom: 40px;
+  }
+
+  /* İlk açılışta beyaz kutular görünmesin */
+
+  .features {
+    margin-top: 0;
+  }
+}

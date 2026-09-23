@@ -61,7 +61,7 @@
 .about-content {
   display: grid;
 
-  grid-template-columns: 1fr 0.9fr;
+  grid-template-columns: 1fr 420px;
 
   gap: 90px;
 
@@ -103,64 +103,98 @@
 
   color: #2b2b2b;
 
-  margin-bottom: 20px;
-
   max-width: 600px;
+
+  margin-bottom: 20px;
 }
 
 /* ============================
-   IMAGE
+   MAIN IMAGE
 ============================ */
 
-.about-image {
-  position: relative;
-}
-
-.about-image::before {
-  display: none;
-}
-
 .about-image img {
-  position: relative;
+  width: 420px;
 
-  width: 100%;
-
-  height: 680px;
+  height: 650px;
 
   object-fit: cover;
 
-  border-radius: 10px;
+  border-radius: 24px;
 
   border: 1px solid rgba(176, 141, 87, 0.35);
 
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+
+  transition: 0.4s ease;
+}
+
+.about-image img:hover {
+  transform: translateY(-8px);
 }
 
 /* ============================
-   DETAIL CONTENT
+   DETAIL AREA
 ============================ */
 
 .about-detail {
-  max-width: 1050px;
+  max-width: 1200px;
 
   margin: auto;
 
-  padding: 80px 40px;
+  padding: 100px 40px;
 }
 
-.about-detail h3 {
+.detail-with-image {
+  display: grid;
+
+  grid-template-columns: 420px 1fr;
+
+  gap: 90px;
+
+  align-items: start;
+}
+
+/* SOL FOTOĞRAF */
+
+.detail-image img {
+  width: 420px;
+
+  height: 560px;
+
+  object-fit: cover;
+
+  border-radius: 24px;
+
+  border: 1px solid rgba(176, 141, 87, 0.35);
+
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+
+  transition: 0.4s ease;
+}
+
+.detail-image img:hover {
+  transform: translateY(-8px);
+}
+
+/* SAĞ METİN */
+
+.detail-text {
+  max-width: 650px;
+}
+
+.detail-text h3 {
   font-family: "Cormorant Garamond", serif;
 
-  font-size: 45px;
+  font-size: 55px;
 
   font-weight: 600;
 
   color: var(--dark);
 
-  margin: 55px 0 20px;
+  margin: 0 0 25px;
 }
 
-.about-detail p {
+.detail-text p {
   font-size: 17px;
 
   line-height: 1.9;
@@ -170,33 +204,35 @@
   margin-bottom: 20px;
 }
 
-/* ============================
-   LIST STYLE
-============================ */
+/* ÇALIŞMA PRENSİPLERİ */
 
-.about-detail ul {
+.principles-title {
+  margin-top: 55px !important;
+
+  font-size: 42px !important;
+}
+
+.detail-text ul {
   list-style: none;
 
   padding: 0;
 
-  margin: 30px 0;
+  margin-top: 25px;
 }
 
-.about-detail li {
+.detail-text li {
   position: relative;
 
-  padding-left: 32px;
+  padding-left: 35px;
 
   font-size: 16px;
 
-  color: #2b2b2b;
-
   line-height: 1.9;
 
-  margin-bottom: 14px;
+  margin-bottom: 15px;
 }
 
-.about-detail li::before {
+.detail-text li::before {
   content: "✓";
 
   position: absolute;
@@ -205,11 +241,11 @@
 
   color: var(--gold);
 
-  font-weight: 600;
+  font-weight: bold;
 }
 
 /* ============================
-   VALUE CARDS
+   CARDS
 ============================ */
 
 .about-values {
@@ -219,55 +255,33 @@
 
   gap: 25px;
 
-  margin-top: 60px;
+  margin-top: 80px;
 }
 
 .about-value {
-  position: relative;
-
   background: #faf7f1;
 
   padding: 40px 32px;
 
-  border-radius: 10px;
+  border-radius: 15px;
 
   border: 1px solid rgba(176, 141, 87, 0.18);
 
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
 
-  overflow: hidden;
-
   transition: 0.35s ease;
-}
-
-.about-value::before {
-  content: "";
-
-  position: absolute;
-
-  top: 0;
-
-  left: 0;
-
-  width: 100%;
-
-  height: 3px;
-
-  background: var(--gold);
 }
 
 .about-value:hover {
   transform: translateY(-8px);
 
-  box-shadow: 0 25px 55px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 25px 55px rgba(0, 0, 0, 0.12);
 }
 
 .about-value h4 {
   font-family: "Cormorant Garamond", serif;
 
   font-size: 32px;
-
-  font-weight: 600;
 
   color: var(--dark);
 
@@ -278,12 +292,10 @@
   font-size: 15px;
 
   line-height: 1.8;
-
-  color: #444;
 }
 
 /* ============================
-   BUTTONS
+   BUTTON
 ============================ */
 
 .about-page .btn,
@@ -298,13 +310,9 @@
 
   background: #2b241f;
 
-  color: #fff;
+  color: white;
 
   border: 1px solid #2b241f;
-
-  font-size: 13px;
-
-  letter-spacing: 1px;
 
   transition: 0.3s ease;
 }
@@ -317,7 +325,7 @@
 }
 
 /* ============================
-   QUOTE OVERLAP
+   QUOTE
 ============================ */
 
 .quote {
@@ -329,138 +337,157 @@
 }
 
 /* ============================
-   RESPONSIVE
-============================ */
-
-/* ============================
-   RESPONSIVE COMPACT PREMIUM
+   TABLET
 ============================ */
 
 @media (max-width: 1000px) {
-  .page-hero {
-    min-height: 300px;
-    padding: 110px 30px;
-  }
-
-  .page-hero h1 {
-    font-size: 58px;
-  }
-
-  .about-page {
-    padding: 75px 30px;
-  }
-
   .about-content {
     grid-template-columns: 1fr;
-    gap: 45px;
-  }
-
-  .about-text h2 {
-    font-size: 52px;
   }
 
   .about-image img {
-    height: 480px;
+    width: 100%;
+
+    height: 520px;
+  }
+
+  .detail-with-image {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+  }
+
+  .detail-image img {
+    width: 100%;
+
+    height: 520px;
   }
 
   .about-values {
     grid-template-columns: repeat(2, 1fr);
-    gap: 18px;
   }
 }
 
+/* ============================
+   MOBILE
+============================ */
+
 @media (max-width: 700px) {
-  /* Hero */
   .page-hero {
     min-height: 240px;
+
     padding: 80px 20px;
   }
 
   .page-hero h1 {
     font-size: 40px;
-    line-height: 1.1;
   }
 
-  .page-hero p {
-    font-size: 14px;
-    margin-top: 12px;
-  }
-
-  /* Ana hakkımda */
   .about-page {
     padding: 45px 18px;
   }
 
-  .about-content {
-    gap: 30px;
-  }
-
-  .about-text .small-title {
-    font-size: 11px;
-    letter-spacing: 4px;
-    margin-bottom: 15px;
-  }
-
   .about-text h2 {
     font-size: 34px;
-    line-height: 1.08;
-    margin-bottom: 18px;
   }
 
-  .about-text p {
+  .about-text p,
+  .detail-text p {
     font-size: 14px;
+
     line-height: 1.7;
   }
 
   .about-image img {
-    height: 300px;
-    border-radius: 8px;
+    width: 100%;
+
+    height: 350px;
+
+    border-radius: 18px;
   }
 
-  /* Bilgi kartları */
+  .detail-image img {
+    width: 100%;
+
+    height: 350px;
+
+    border-radius: 18px;
+  }
+
+  .detail-text h3 {
+    font-size: 35px;
+  }
+
+  .principles-title {
+    font-size: 30px !important;
+  }
+
   .about-values {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-    margin-top: 35px;
+    grid-template-columns: 1fr;
   }
 
   .about-value {
-    padding: 22px 14px;
-  }
-
-  .about-value h4 {
-    font-size: 22px;
-    margin-bottom: 8px;
-  }
-
-  .about-value p {
-    font-size: 13px;
-    line-height: 1.55;
-  }
-
-  /* Detay içerik */
-  .about-detail {
-    padding: 35px 18px;
-  }
-
-  .about-detail h3 {
-    font-size: 30px;
-    margin: 35px 0 15px;
-  }
-
-  .about-detail p {
-    font-size: 14px;
-    line-height: 1.7;
-  }
-
-  .about-detail li {
-    font-size: 14px;
-    padding-left: 25px;
-    line-height: 1.6;
+    padding: 25px 20px;
   }
 
   .about-page .btn {
     width: 100%;
-    padding: 14px 20px;
+  }
+}
+/* ============================
+   MOBILE HEADER FIX - HAKKIMDA
+============================ */
+
+@media (max-width: 700px) {
+  /* Header alanı için boşluk */
+
+  .page-hero {
+    padding-top: 140px;
+  }
+
+  /* Hero başlığı header içine girmesin */
+
+  .page-hero h1 {
+    position: relative;
+
+    z-index: 1;
+  }
+
+  /* Header logo hizalama */
+
+  .logo {
+    display: flex;
+
+    align-items: center;
+  }
+
+  .logo img {
+    max-width: 65px;
+
+    height: auto;
+  }
+
+  /* Logo yazı alanı */
+
+  .logo-text {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    line-height: 1;
+  }
+
+  /* SÜRME HUKUK & DANIŞMANLIK */
+
+  .logo-text span {
+    display: block;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    white-space: nowrap;
   }
 }
