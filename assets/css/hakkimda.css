@@ -9,7 +9,7 @@
 .page-hero {
   position: relative;
 
-  min-height: 420px;
+  min-height: 376px;
 
   display: flex;
 
@@ -17,13 +17,9 @@
 
   justify-content: center;
 
-  padding: 180px 40px;
+  padding: 140px 40px 90px;
 
-  background: linear-gradient(
-    90deg,
-    rgba(33, 24, 18, 0.96),
-    rgba(33, 24, 18, 0.78)
-  );
+  background: #211812;
 }
 
 .page-hero h1 {
